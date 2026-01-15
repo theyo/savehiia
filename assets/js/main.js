@@ -7,7 +7,11 @@ function toggleSection(header) {
 
 // Copy template text to clipboard
 function copyTemplate(button) {
-    const templateText = button.closest('.template-text').innerText;
+    // Find the template-full div (the complete template) if it exists, otherwise use template-text
+    const template = button.closest('.template');
+    const fullTemplate = template.querySelector('.template-full');
+    const templateText = fullTemplate ? fullTemplate.innerText : button.closest('.template-text').innerText;
+    
     navigator.clipboard.writeText(templateText).then(() => {
         const originalText = button.innerText;
         button.innerText = '✓ Copied!';
@@ -17,6 +21,21 @@ function copyTemplate(button) {
     }).catch(err => {
         alert('Failed to copy template. Please try again.');
     });
+}
+
+// Toggle template expansion
+function toggleTemplate(button) {
+    const template = button.closest('.template');
+    const preview = template.querySelector('.template-preview');
+    const full = template.querySelector('.template-full');
+    
+    if (full.style.display === 'none' || !full.style.display) {
+        full.style.display = 'block';
+        preview.style.display = 'none';
+    } else {
+        full.style.display = 'none';
+        preview.style.display = 'block';
+    }
 }
 
 // Open WhatsApp community link

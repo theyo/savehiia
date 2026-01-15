@@ -65,7 +65,10 @@
             <div class="action-buttons">
                 <a href="#contact" class="btn btn-primary">✉️ Email TVUSD Leadership</a>
                 <a href="#" class="btn btn-secondary" onclick="openShareMenu(event)">📢 Share on Social Media</a>
-                <a href="#" class="btn btn-secondary" onclick="openWhatsApp(event)">💬 Join WhatsApp Community</a>
+                <div class="btn-with-tag">
+                    <button class="btn btn-secondary" disabled>💬 Join WhatsApp Community</button>
+                    <span class="coming-soon-tag">Coming Soon</span>
+                </div>
             </div>
 
             <!-- Main Content Section -->
@@ -106,25 +109,54 @@
                                 </button>
                                 <div class="collapsible-content">
                                     <div class="template">
-                                        <h4>Template 1: Personal Story</h4>
-                                        <div class="template-text">
-                                            <p>Dear [Name],</p>
-                                            <p>My name is [Your Name] and I am writing to urge you to reconsider the
-                                                elimination of the teacher-directed program in HIIA. My child has
-                                                thrived in this program because...</p>
-                                            <p><button class="copy-btn" onclick="copyTemplate(this)">📋 Copy</button>
-                                            </p>
+                                        <h4>Template for Board Members: Request for Public Discussion</h4>
+                                        <div class="template-preview">
+                                            <p><strong>Subject:</strong> Request for Public Discussion Regarding the Discontinuation of the HIIA Teacher-Directed Program</p>
+                                            <p>Dear [Superintendent/Board Member Name],</p>
+                                            <p>I am writing to formally express my concern regarding the recent news of the planned discontinuation of the HIIA Teacher-Directed Program at the end of this school year...</p>
+                                            <button class="expand-btn" onclick="toggleTemplate(this)">▼ Show Full Template</button>
                                         </div>
+                                        <div class="template-text template-full" style="display: none;">
+                                            <p><strong>Subject:</strong> Request for Public Discussion Regarding the Discontinuation of the HIIA Teacher-Directed Program</p>
+                                            <p>Dear [Superintendent/Board Member Name],</p>
+                                            <p>I am writing to formally express my concern regarding the recent news of the planned discontinuation of the HIIA Teacher-Directed Program at the end of this school year. I respectfully request that this decision be brought forward as an agenda item for public discussion and review.</p>
+                                            <p>My child has been part of this program since [grade/year], and during this time I have seen them grow academically, socially, and emotionally in an environment specifically designed to meet their learning needs. My child has [IEP/504/learning needs/medical needs—optional], and the educators in this program have consistently provided the support and structure necessary for them to succeed. While they are capable of learning in a traditional classroom, they benefit greatly from the reduced distractions, teacher-led structure, and focused learning environment this program provides. Because of this setting, my child has been able to thrive in ways that may not have been possible elsewhere.</p>
+                                            <p>Our family's positive experience with this program extends beyond academics. The individualized attention, encouragement, and supportive environment have helped my child build confidence, develop social skills, and form meaningful connections with peers. These outcomes are not accidental; they are the direct result of a learning model that works for students who may not thrive in a traditional classroom due to learning differences, medical needs, or social challenges.</p>
+                                            <p>I am also concerned about the process by which this decision appears to have been made. To my knowledge, teachers, parents, and students affected by this decision were not informed until very recently, raising questions about transparency and stakeholder engagement. Decisions of this magnitude deserve open communication, community input, and thoughtful review.</p>
+                                            <p>This decision impacts approximately 255–300 students, as well as families whose children learn best in this environment. I respectfully ask that you review the relevant data, consider the educational and equity implications, and allow for public discussion by placing this matter on a future board agenda. I urge you to be a voice for the students and families whose needs may not align with a one-size-fits-all educational model.</p>
+                                            <p>Thank you for your time, your service, and your consideration of this request. I appreciate your willingness to listen and to lead with transparency and care.</p>
+                                            <p>Sincerely,<br>
+                                            [Your Name]<br>
+                                            [Your Contact Information – optional]<br>
+                                            [Your Student's Name – optional]</p>
+                                            <button class="expand-btn" onclick="toggleTemplate(this)">▲ Show Less</button>
+                                        </div>
+                                        <p><button class="copy-btn" onclick="copyTemplate(this)">📋 Copy</button></p>
                                     </div>
                                     <div class="template">
-                                        <h4>Template 2: Future Families</h4>
-                                        <div class="template-text">
-                                            <p>Dear [Name],</p>
-                                            <p>As a future HIIA family, I am deeply concerned about the announcement
-                                                that the teacher-directed program will be discontinued...</p>
-                                            <p><button class="copy-btn" onclick="copyTemplate(this)">📋 Copy</button>
-                                            </p>
+                                        <h4>Template for Superintendent: Request for Reconsideration</h4>
+                                        <div class="template-preview">
+                                            <p><strong>Subject:</strong> Request for Reconsideration of the Discontinuation of the HIIA Teacher-Directed Program</p>
+                                            <p>Dear [Superintendent],</p>
+                                            <p>I am writing to express my deep concern regarding the recent decision to discontinue the HIIA Teacher-Directed Program at the end of this school year...</p>
+                                            <button class="expand-btn" onclick="toggleTemplate(this)">▼ Show Full Template</button>
                                         </div>
+                                        <div class="template-text template-full" style="display: none;">
+                                            <p><strong>Subject:</strong> Request for Reconsideration of the Discontinuation of the HIIA Teacher-Directed Program</p>
+                                            <p>Dear [Superintendent],</p>
+                                            <p>I am writing to express my deep concern regarding the recent decision to discontinue the HIIA Teacher-Directed Program at the end of this school year. I respectfully urge you to reconsider this decision and to actively seek input from the families, students, and educators who will be directly affected.</p>
+                                            <p>We are deeply disappointed by the decision to discontinue the teacher‑directed program at Home Instead Innovation Academy. Over the years, our child [Name] has thrived academically and socially thanks to the dedicated staff and the structured environment this program provides.</p>
+                                            <p>The daily engagement with teachers and peers has been instrumental in our child's development. We believe the independent study model cannot offer the same consistency, accountability, or sense of community as the teacher‑directed approach. The environment provided by this program has allowed our child to grow academically, socially, and emotionally in ways that may not have been possible in a traditional classroom setting.</p>
+                                            <p>This program is important to us for more than just our own family. One of the few positive outcomes from the COVID era has been the emergence of programs like this, which offer essential choices for students who may face challenges such as social anxiety, health concerns, or other circumstances that make regular classroom attendance difficult. These alternatives allow families to access high‑quality education without compromise. The discontinuation of this program feels like a significant step backward after meaningful progress.</p>                                            
+                                            <p>This decision impacts approximately 255–300 students, as well as families whose children learn best in this environment. I respectfully ask that you pause and reconsider this decision, review the relevant data, and engage directly with the families and educators who rely on this program. Their experiences and perspectives are essential to making an informed, equitable, and student‑centered determination.</p>
+                                            <p>Thank you both for your time, your leadership, and your willingness to listen to the community you serve. I appreciate your consideration and your commitment to supporting all students and families.</p>
+                                            <p>Sincerely,<br>
+                                            [Your Name]<br>
+                                            [Your Contact Information – optional]<br>
+                                            [Your Student's Name(s) – optional]</p>
+                                            <button class="expand-btn" onclick="toggleTemplate(this)">▲ Show Less</button>
+                                        </div>
+                                        <p><button class="copy-btn" onclick="copyTemplate(this)">📋 Copy</button></p>
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +237,10 @@
                             <div class="resource-icon">🤝</div>
                             <h3>Join Our Community</h3>
                             <p>Stay connected and informed</p>
-                            <a href="#" class="btn btn-secondary" onclick="openWhatsApp(event)">Join WhatsApp</a>
+                            <div class="btn-with-tag">
+                                <button class="btn btn-secondary" disabled>Join WhatsApp</button>
+                                <span class="coming-soon-tag">Coming Soon</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -224,8 +259,10 @@
                             target="_blank" rel="noopener noreferrer" class="social-btn facebook">f Facebook</a>
                         <a href="https://twitter.com/intent/tweet?url=https://savehiia.com&text=Save%20HIIA!%20Protect%20teacher-directed%20learning.%20%23saveHIIA"
                             target="_blank" rel="noopener noreferrer" class="social-btn twitter">𝕏 Twitter</a>
-                        <a href="https://api.whatsapp.com/send?text=Save%20HIIA!%20Protect%20teacher-directed%20learning%20in%20Temecula.%20%23saveHIIA%20https://savehiia.com"
-                            target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">WhatsApp</a>
+                        <div class="social-btn-wrapper">
+                            <button class="social-btn whatsapp" disabled>WhatsApp</button>
+                            <span class="coming-soon-tag-social">Coming Soon</span>
+                        </div>
                         <a href="mailto:?subject=Save%20HIIA&body=Please%20help%20protect%20teacher-directed%20learning%20in%20HIIA.%20%23saveHIIA%20https://savehiia.com"
                             class="social-btn email">✉️ Email</a>
                     </div>
