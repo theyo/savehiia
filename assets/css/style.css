@@ -1,0 +1,203 @@
+/* Global layout and typography */
+:root {
+    --brand-blue: #477793;
+    --accent-orange: #ff6600;
+    --border-blue: #0066cc;
+    --text-color: #404040;
+    --bg-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Impact, "Arial Narrow Bold", Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Flyer shell */
+.flyer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 3px solid var(--border-blue);
+    background: var(--bg-color);
+}
+
+.column {
+    padding: 0.25in;
+    border-right: 3px solid var(--border-blue);
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+/* Left column */
+.left-column {
+    padding-right: 0.4in;
+    padding-left: 0.05in;
+}
+
+.logo {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 163px;
+    height: 159px;
+    float: left;
+    margin-right: 12px;
+}
+
+.title {
+    font-size: 48pt;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.title .save {
+    color: var(--brand-blue);
+}
+
+.title .hiia {
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+.subtitle {
+    color: var(--brand-blue);
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 10px;
+    clear: both;
+}
+
+.contact-section {
+    margin-top: 20px;
+}
+
+.contact-item {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 16pt;
+    margin-right: 5px;
+}
+
+.role {
+    color: #333333;
+    font-size: 14pt;
+}
+
+.name {
+    color: var(--brand-blue);
+    font-size: 11pt;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.email {
+    color: #333333;
+    font-size: 11pt;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.email a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.email a:hover {
+    color: var(--border-blue);
+    text-decoration: underline;
+}
+
+/* Right column */
+.right-column {
+    padding-left: 0.25in;
+    padding-right: 0.05in;
+}
+
+.right-title {
+    font-size: 24pt;
+    color: var(--accent-orange);
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Impact, sans-serif;
+}
+
+.right-subtitle {
+    font-size: 20pt;
+    color: var(--accent-orange);
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Impact, sans-serif;
+}
+
+.message {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.website {
+    color: var(--accent-orange);
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 60px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .flyer {
+        grid-template-columns: 1fr;
+    }
+
+    .column {
+        border-right: none;
+        border-bottom: 3px solid var(--border-blue);
+    }
+
+    .column:last-child {
+        border-bottom: none;
+    }
+
+    .title {
+        font-size: 36pt;
+    }
+
+    .logo img {
+        width: 130px;
+        height: 127px;
+    }
+
+    .right-title {
+        font-size: 20pt;
+    }
+
+    .right-subtitle {
+        font-size: 18pt;
+    }
+
+    .message {
+        font-size: 12pt;
+    }
+}
